@@ -1,0 +1,109 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+.header-background {
+  background-color: #212121;
+  background-image: url("./Images/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 80vh;
+}
+
+.header-background {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.header-background #header {
+  padding: 20px;
+  width: calc(100% - 40px);
+  height: auto;
+  border-bottom: solid 1px #f2f2f2;
+  position: fixed;
+  -webkit-box-shadow: 0px -10px 25px #212121;
+          box-shadow: 0px -10px 25px #212121;
+}
+
+.header-background #header h2 {
+  color: #f2f2f2;
+  display: inline-block;
+}
+
+.header-background #header nav {
+  width: auto;
+  float: right;
+}
+
+.header-background #header nav ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-background #header nav ul li {
+  list-style: none;
+  vertical-align: center;
+  margin: 0px 30px;
+  padding: 5px 0px;
+}
+
+.header-background #header nav ul li a, .header-background #header nav ul li a:hover, .header-background #header nav ul li a:visited {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  text-decoration: none;
+  color: #f2f2f2;
+}
+
+.header-background #header nav ul li a:hover {
+  color: #009A7F;
+}
+
+.header-background section {
+  width: 60%;
+  height: auto;
+  color: #f2f2f2;
+  text-align: center;
+}
+
+.header-background section p {
+  font-size: 20px;
+  text-shadow: 1px 1px 2px black;
+  margin-bottom: 100px;
+}
+
+.header-background section a, .header-background section a:hover, .header-background section a:visited {
+  text-decoration: none;
+  color: #f2f2f2;
+  border: solid 1px #f2f2f2;
+  padding: 13px 20px;
+  margin: 0px 20px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.header-background section a:hover {
+  background-color: #009A7F;
+}
+
+main section {
+  padding: 200px;
+  width: calc(100% - 400px);
+  color: #f2f2f2;
+}
+
+main #services {
+  background-color: #009A7F;
+}
+/*# sourceMappingURL=styles.css.map */
