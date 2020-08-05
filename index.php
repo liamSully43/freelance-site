@@ -47,21 +47,21 @@
             <h1 class="main-titles">Portfolio</h1>
             <div class="mobile">
                 <summary>
-                    <a href="https://www.amazon.co.uk" target="_blank" class="image-container grace">
+                    <a href="https://smyth-photogrpahy.co.uk" target="_blank" class="image-container grace">
                         <img width="100%" height="auto" />
                     </a>
                     <h3 class="headings">Grace Smyth - Wedding Photographer</h3>
                     <p>Designing, Developing & Hosting an online portfolio for a wedding photographer</p>
                 </summary>
                 <summary>
-                    <a href="https://www.amazon.co.uk" target="_blank" class="image-container ryan">
+                    <a href="https://foleydesigns.co.uk" target="_blank" class="image-container ryan">
                         <img width="100%" height="auto" />
                     </a>
                     <h3 class="headings">Ryan Foley - Painter & Decorator</h3>
                     <p>Bespoke painting and decorating website for a bespoke painter and decorator</p>
                 </summary>
                 <summary>
-                    <a href="https://www.amazon.co.uk" target="_blank" class="image-container alex">
+                    <a href="https://alexanderflemings.co.uk" target="_blank" class="image-container alex">
                         <img width="100%" height="auto" />
                     </a>
                     <h3 class="headings">Alex Flemings - Artistic Photographer</h3>
@@ -69,13 +69,13 @@
                 </summary>
             </div>
             <summary class="images">
-                <a href="https://www.amazon.co.uk" target="_blank" class="image-container grace">
+                <a href="https://smyth-photogrpahy.co.uk" target="_blank" class="image-container grace">
                     <img width="100%" height="auto" />
                 </a>
-                <a href="https://www.amazon.co.uk" target="_blank" class="image-container ryan">
+                <a href="https://foleydesigns.co.uk" target="_blank" class="image-container ryan">
                     <img width="100%" height="auto" />
                 </a>
-                <a href="https://www.amazon.co.uk" target="_blank" class="image-container alex">
+                <a href="https://alexanderflemings.co.uk" target="_blank" class="image-container alex">
                     <img width="100%" height="auto" />
                 </a>
             </summary>
@@ -98,7 +98,7 @@
             <h1 class="main-titles">Contact</h1>
             <h2>Get in touch -</h2>
             <h3>From discussing my work to getting a quote, fill in the form below and I'll be happy to speak to you!</h3>
-            <form method="POST" action="/Freelance/test.php#contact">
+            <form method="POST" action="/#contact">
                 <div>
                     <input type="text" placeholder="Name" name="name" />
                     <input type="email" placeholder="Email" name="email" />
