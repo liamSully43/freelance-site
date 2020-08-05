@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0px;
   font-family: sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -10,15 +11,12 @@ body {
 
 .header-background {
   background-color: #212121;
-  background-image: url("./Images/background.png");
+  background-image: url("./Images/background.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: 80vh;
-}
-
-.header-background {
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -28,10 +26,8 @@ body {
   padding: 20px;
   width: calc(100% - 40px);
   height: auto;
-  border-bottom: solid 1px #f2f2f2;
   position: fixed;
-  -webkit-box-shadow: 0px -10px 25px #212121;
-          box-shadow: 0px -10px 25px #212121;
+  z-index: 1;
 }
 
 .header-background #header h2 {
@@ -70,6 +66,138 @@ body {
   color: #009A7F;
 }
 
+@media (max-width: 700px) {
+  .header-background #header h2, .header-background #header nav {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .header-background #header ul {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 2.5vw;
+  }
+  .header-background #header li {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    margin: auto !important;
+  }
+  .header-background #header li a {
+    width: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .header-background #header h2 {
+    font-size: 5vw;
+  }
+  .header-background #header li {
+    font-size: 3vw;
+  }
+}
+
+.header-background .header-scrolled {
+  background-color: #f2f2f2;
+  -webkit-box-shadow: 0px -10px 25px #212121;
+          box-shadow: 0px -10px 25px #212121;
+  -webkit-animation: scrolled-background 0.3s;
+          animation: scrolled-background 0.3s;
+}
+
+.header-background .header-scrolled h2, .header-background .header-scrolled nav > ul > li > a {
+  -webkit-animation: scrolled-text 0.3s;
+          animation: scrolled-text 0.3s;
+  color: #212121 !important;
+}
+
+.header-background .header-scrolled nav > ul > li > a:hover {
+  color: #009A7F !important;
+}
+
+.header-background .unscrolled {
+  -webkit-animation: unscrolled-background 0.3s;
+          animation: unscrolled-background 0.3s;
+}
+
+.header-background .unscrolled h2, .header-background .unscrolled nav > ul > li > a {
+  -webkit-animation: unscrolled-text 0.3s;
+          animation: unscrolled-text 0.3s;
+}
+
+@-webkit-keyframes scrolled-text {
+  from {
+    color: #f2f2f2;
+  }
+  to {
+    color: #212121;
+  }
+}
+
+@keyframes scrolled-text {
+  from {
+    color: #f2f2f2;
+  }
+  to {
+    color: #212121;
+  }
+}
+
+@-webkit-keyframes scrolled-background {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: #f2f2f2;
+  }
+}
+
+@keyframes scrolled-background {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: #f2f2f2;
+  }
+}
+
+@-webkit-keyframes unscrolled-text {
+  from {
+    color: #212121;
+  }
+  to {
+    color: #f2f2f2;
+  }
+}
+
+@keyframes unscrolled-text {
+  from {
+    color: #212121;
+  }
+  to {
+    color: #f2f2f2;
+  }
+}
+
+@-webkit-keyframes unscrolled-background {
+  from {
+    background-color: #f2f2f2;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes unscrolled-background {
+  from {
+    background-color: #f2f2f2;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
 .header-background section {
   width: 60%;
   height: auto;
@@ -79,7 +207,6 @@ body {
 
 .header-background section p {
   font-size: 20px;
-  text-shadow: 1px 1px 2px black;
   margin-bottom: 100px;
 }
 
@@ -97,13 +224,420 @@ body {
   background-color: #009A7F;
 }
 
+@media (max-width: 500px) {
+  .header-background section a, .header-background section a:hover, .header-background section a:visited {
+    font-size: 4.8vw;
+    padding: 3vw 4.8vw;
+    margin: 0px 4.8vw;
+    display: inline-block !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .header-background section {
+    width: 85%;
+  }
+}
+
+@media (max-width: 530px) {
+  .header-background section p {
+    font-size: 15px;
+  }
+}
+
 main section {
-  padding: 200px;
-  width: calc(100% - 400px);
+  padding: 10%;
+  width: 80%;
   color: #f2f2f2;
 }
 
-main #services {
+main #services, main #contact {
   background-color: #009A7F;
+}
+
+main .main-titles {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 100px;
+  font-size: 35px;
+}
+
+@media (max-width: 500px) {
+  main .main-titles {
+    margin-bottom: 70px;
+    font-size: 24px;
+  }
+}
+
+main #services div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+main #services div article {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  text-align: center;
+}
+
+main #services div article li {
+  margin: 50px 0px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  display: inline-block;
+  width: 100%;
+}
+
+main #services div article li i, main #services div article li h3 {
+  display: inline-block;
+}
+
+main #services div article li h3 {
+  vertical-align: top;
+  padding: 14px 0px;
+}
+
+main #services div article li .fas, main #services div article li .fab {
+  display: inline-block;
+  margin-right: 30px;
+  font-size: 50px;
+}
+
+main #services div article li .css-animations {
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 1.5s infinite linear;
+          animation: spin 1.5s infinite linear;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url("./Images/animation.png");
+  background-position: center;
+  background-size: cover;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 500px) {
+  main #services div article li h3 {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 730px) {
+  main #services div article {
+    width: 100%;
+    display: block;
+  }
+  main #services div article li {
+    margin: 30px 0px;
+  }
+  main #services div article li h3 {
+    padding: 5px 0px;
+  }
+  main #services div article li .fas, main #services div article li .fab {
+    font-size: 30px;
+  }
+  main #services div article li .css-animations {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 730px) {
+  main #services div {
+    display: block;
+  }
+}
+
+main #portfolio {
+  background-color: #f2f2f2;
+  color: #212121;
+}
+
+main #portfolio h1 {
+  color: #009A7F;
+}
+
+main #portfolio .mobile {
+  display: none;
+}
+
+main #portfolio .mobile .headings {
+  color: #009A7F;
+}
+
+main #portfolio summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+main #portfolio summary .image-container {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  margin: auto;
+  text-decoration: none;
+  background-color: #212121;
+  background-position: top;
+  background-size: cover;
+  font-size: 11vw;
+}
+
+main #portfolio summary .image-container img {
+  opacity: 0;
+}
+
+main #portfolio summary .image-container:hover {
+  -webkit-animation: scroll 3.5s;
+          animation: scroll 3.5s;
+  background-position: bottom;
+}
+
+main #portfolio summary .grace {
+  background-image: url("./Images/grace-smyth-screenshot.jpg");
+}
+
+main #portfolio summary .ryan {
+  background-image: url("./Images/ryan-foley-screenshot.jpg");
+}
+
+main #portfolio summary .alex {
+  background-image: url("./Images/alex-flemings-screenshot.jpg");
+}
+
+main #portfolio summary .alex:hover {
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+
+@-webkit-keyframes scroll {
+  from {
+    background-position: top;
+  }
+  to {
+    background-position: bottom;
+  }
+}
+
+@keyframes scroll {
+  from {
+    background-position: top;
+  }
+  to {
+    background-position: bottom;
+  }
+}
+
+main #portfolio summary div {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  margin: auto;
+}
+
+main #portfolio summary div .headings {
+  margin: 20px 0px;
+  color: #009A7F;
+}
+
+@media (max-width: 1150px) {
+  main #portfolio summary div .headings {
+    font-size: 15px;
+  }
+  main #portfolio summary div p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 690px) {
+  main #portfolio .mobile {
+    display: block;
+  }
+  main #portfolio .images, main #portfolio .text {
+    display: none;
+  }
+  main #portfolio summary {
+    max-width: 270px;
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  main #portfolio summary .image-container {
+    font-size: 130px;
+  }
+  main #portfolio summary .headings {
+    font-size: 15px;
+    margin: 10px 0px;
+  }
+  main #portfolio summary p {
+    font-size: 12px;
+  }
+}
+
+main #contact h2 {
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+main #contact h3 {
+  font-weight: 300;
+}
+
+main #contact form {
+  max-width: 750px;
+  min-width: 50%;
+  height: 145px;
+  margin-top: 30px;
+}
+
+main #contact form div {
+  float: left;
+  width: 50%;
+}
+
+main #contact form div input, main #contact form div button {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+main #contact form div input {
+  width: 100%;
+}
+
+main #contact form div button {
+  width: auto;
+  padding: 10px 20px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+main #contact form div button:hover {
+  -webkit-animation: submit 0.2s;
+          animation: submit 0.2s;
+  color: #009A7F;
+  background-color: #f2f2f2;
+}
+
+@-webkit-keyframes submit {
+  from {
+    color: #f2f2f2;
+    background-color: #009A7F;
+  }
+  to {
+    color: #009A7F;
+    background-color: #f2f2f2;
+  }
+}
+
+@keyframes submit {
+  from {
+    color: #f2f2f2;
+    background-color: #009A7F;
+  }
+  to {
+    color: #009A7F;
+    background-color: #f2f2f2;
+  }
+}
+
+main #contact form textarea, main #contact form input, main #contact form button {
+  background-color: #009A7F;
+  border: solid 2px #f2f2f2;
+  color: #f2f2f2;
+  border-radius: 5px;
+}
+
+main #contact form textarea:focus, main #contact form input:focus, main #contact form button:focus {
+  outline: none;
+}
+
+main #contact form textarea::-webkit-input-placeholder, main #contact form input::-webkit-input-placeholder {
+  color: #545454;
+}
+
+main #contact form textarea:-ms-input-placeholder, main #contact form input:-ms-input-placeholder {
+  color: #545454;
+}
+
+main #contact form textarea::-ms-input-placeholder, main #contact form input::-ms-input-placeholder {
+  color: #545454;
+}
+
+main #contact form textarea::placeholder, main #contact form input::placeholder {
+  color: #545454;
+}
+
+main #contact form textarea {
+  padding: 10px;
+  float: right;
+  width: calc(45% - 30px);
+  resize: vertical;
+  height: 64px;
+}
+
+main #contact form .clear {
+  clear: both;
+}
+
+main #contact .message {
+  float: left;
+}
+
+@media (max-width: 500px) {
+  main #contact h2 {
+    font-size: 4.5vw;
+  }
+  main #contact h3 {
+    font-size: 3.5vw;
+  }
+  main #contact form div, main #contact form textarea {
+    width: 46%;
+    margin: auto;
+  }
+  main #contact form textarea, main #contact form input, main #contact form button {
+    border-width: 1px;
+    font-size: 3vw;
+  }
+  main #contact form div input {
+    width: calc(100% - 12px);
+    padding: 5px;
+  }
+  main #contact form div button {
+    padding: 7px 14px;
+    font-size: 3vw;
+  }
+  main #contact form textarea {
+    padding: 5px;
+    height: 45px;
+  }
+  main #contact .message {
+    margin-top: -30px;
+    font-size: 3.5vw;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
