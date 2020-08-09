@@ -47,7 +47,7 @@
             <h1 class="main-titles">Portfolio</h1>
             <div class="mobile">
                 <summary>
-                    <a href="https://smyth-photogrpahy.co.uk" target="_blank" class="image-container grace">
+                    <a href="https://smyth-photography.co.uk" target="_blank" class="image-container grace">
                         <img width="100%" height="auto" />
                     </a>
                     <h3 class="headings">Grace Smyth - Wedding Photographer</h3>
